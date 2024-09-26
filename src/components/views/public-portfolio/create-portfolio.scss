@@ -1,0 +1,270 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+.create-portfolio-container {
+  flex: 1;
+  max-width: 100%;
+  padding: 0 18px;
+  .create-portfolio-header-container{
+    width: 100%;
+    margin-bottom: 36px;
+    .create-portfolio-header-title-container{
+      color: $primary-color;
+      position: relative;
+      .create-portfolio-title{
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .title-description {
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .close-button {
+        height: 48px;
+        width: 48px;
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        border-radius: 2px;
+        padding: 8px;
+        cursor: pointer;
+        svg{
+          height: 100%;
+          width: 100%;
+          .real-path{
+            fill: $primary-color;
+          }
+        }
+        z-index: 150;
+        &:hover{
+          box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+        }
+        &:active{
+          box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.2);
+        }
+      }
+    }
+    border-bottom: 1px solid #ccc;
+  }
+  .portfolio-link {
+    display: flex;
+    align-items: center;
+    .link-title {
+      font-weight: 600;
+      width: fit-content;
+      margin-bottom: 0;
+    }
+    .link-domain {
+      margin: 0 8px;
+      text-decoration: underline;
+      cursor: pointer;
+      &:hover {
+        color: #aaa;
+      }
+    }
+    input {
+      height: 30px;
+      flex: 1;
+      margin-bottom: 0;
+      padding: 0 4px;
+    }
+  }
+  .edit-portfolio {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 18px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    .body {
+      background-color: #ecf1f9;
+      width: 100%;
+      .header-img {
+        width: 100%;
+      }
+      .portfolio-header-container {
+        width:100%;
+        height: 400px;
+        position: relative;
+        top: -4px;
+        .cover-image {
+          height: 100%;
+          width: 100%;
+          background-color: #aaa;
+          .cover-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          .edit-image{
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            .image{
+              justify-content: center;
+              text-align: center;
+              .image-title{
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 20px;
+              }
+              .button{
+                width: 200px;
+                margin: 36px;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                font-weight: 600;
+                input {
+                  display: none;
+                }
+              }
+              img{
+                max-height: 240px;
+              }
+            }
+          }
+        }
+        .portfolio-details {
+          border-radius: 12px;
+          background-color: #fff;
+          padding: 24px;
+          display: flex;
+          min-width: 320px;
+          top: 400px;
+          width: 90%;
+          position: absolute;
+          margin-left: 40px;
+          width: calc(100% - 80px);
+          top: auto;
+          bottom: 50px;
+          .portfolio-image {
+            display: flex;
+            align-content: center;
+            flex: 4;
+            align-items: center;
+            max-width: 120px;
+            margin-left: 30px;
+            min-width: 110px;
+            img {
+              height: 80px;
+              width: 80px;
+              border-radius: 4px;
+            }
+          }
+          .text {
+            margin: auto 0 auto 5px;
+            width: 100%;
+            .name {
+              width: 100%;
+              position: relative;
+              input {
+                font-size: 25px;
+                font-weight: 500;
+                color: $primary-color;
+                width: 100%;
+                margin: 0;
+                height: 48px;
+              }
+              .title-heading {
+                position: absolute;
+                top: -20px;
+                font-size: 14px;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+      .portfolio-info {
+        width: 100%;
+        padding: 36px;
+        .portfolio-tabs {
+          display: flex;
+          .portfolio-tab {
+            width: max-content;
+            height: fit-content;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 8px 12px;
+            margin-right: 8px;
+            color: #adafca;
+            box-shadow: 4px 7px 12px 0 rgba(0, 0, 0, 0.10);
+            white-space: nowrap;
+            transition: all 0.2s ease-in-out;
+            &:hover,
+            &.active {
+              background-color: #7353ff;
+              color: #fff;
+            }
+          }
+        }
+        .portfolio-info-container {
+          margin: 18px 0;
+          padding: 36px;
+          border-radius: 18px;
+          display: flex;
+          background-color: #fff;
+          .icon {
+            margin-right: 18px;
+            img {
+              width: 48px;
+              height: 48px;
+            }
+          }
+          .info-text {
+            flex: 1;
+            .title {
+              font-size: 24px;
+              font-weight: 600;
+              height: 48px;
+              color: #183b56;
+
+            }
+            .name {
+              margin: 12px 0;
+              textarea {
+                width: 100%;
+                height: 200px;
+              }
+            }
+          }
+        }
+        .other-settings {
+          margin: 18px 0;
+          padding: 36px;
+          border-radius: 18px;
+          display: flex;
+          flex-direction: column;
+          background-color: #fff;
+          .portfolio-checkbox {
+            display: flex;
+            margin: 10px 0;
+            .checkbox-label {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .all-buttons {
+    display: flex;
+    justify-content: space-between;
+    .delete-btn {
+      width: 260px;
+      margin: 24px 0 0 0;
+    }
+    .save-buttons {
+      display: flex;
+      justify-content: flex-end;
+      .save-btn {
+        width: 260px;
+        margin: 24px 0 0 48px;
+      }
+    }
+  }
+}

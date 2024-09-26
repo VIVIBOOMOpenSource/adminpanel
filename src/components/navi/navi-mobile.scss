@@ -1,0 +1,63 @@
+@import '../../css/styles/colors';
+@import '../../css/styles/variables';
+
+$height: 48px;
+$width: $height;
+
+.navi-mobile{
+  display: flex;
+  flex: 0 0 0;
+  overflow: hidden;
+  position: relative;
+  height: 0px;
+  transition: height 0.3s, flex 3.3s;
+  background-color: $primary-color;
+
+  > .button{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0 8px;
+    svg{
+      height: 100%;
+      width: 100%;
+      .real-path{
+        fill: #FFF;
+      }
+    }
+  }
+  > .logo-container{
+    flex: 1;
+    .navi-logo{
+      background-color: rgba(0,0,0,0);
+      .text{
+        font-size: 20px;
+      }
+    }
+  }
+}
+@media screen and (min-width: $desktop-width) {
+  .navi-mobile{
+    > .button{
+      width: 0px;
+    }
+    > .logo-container{
+      width: 0px;
+    }
+  }
+  
+}
+@media screen and (max-width: $mobile-width) {
+  .navi-mobile{
+    padding: 0 44px;
+    position: fixed;
+    z-index: 100;
+    height: $height;
+    width: 100%;
+    flex: 0 0 $height;
+    button{
+      height: $height;
+      width: $width;
+    }
+  }
+}

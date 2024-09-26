@@ -1,0 +1,157 @@
+@import "../../../css/styles/colors";
+@import "../../../css/styles/variables";
+
+
+.modal :first-child.view-reward-modal{
+  min-width: 780px;
+}
+.modal :first-child.create-reward-modal {
+  min-width: 780px;
+}
+.view-reward-modal{
+  .entry-options{
+    margin: 0 10px 0 0;
+  }
+  .reward-modal-div{
+    padding: 10px;
+    ::-webkit-scrollbar{
+      display: none;
+    }
+    .item{
+      width: 100%;
+      label {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: gray;
+        }
+      }
+      textarea {
+        height: auto;
+      }
+      .reward-link-container {
+        display: flex;
+        flex-direction: row;
+        transition: all 0.3s ease-in-out;
+        width: fit-content;
+        svg {
+          margin: 0 0 0 5px;
+          width: 20px;
+          height: 20px;
+        }
+        &:hover{
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+    }
+    .code-generator-button{
+      margin-top: 10px;
+      width: fit-content;
+    }
+    .reward-users-ctn {
+      flex: 1;
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #e4edf6;
+      .reward-users-header {
+        padding: 0 8px;
+        background-color: #f3f7fc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .no-user-text {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+      }
+      ul.reward-users-list{
+        margin: 0;
+        background-color: #fff;
+        > li{
+          margin: 0;
+          padding: 8px;
+          display: flex;
+          border-radius: 3px;
+          .reward-users-info{
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            flex-direction: row;
+            img,.svg-container {
+              margin: 0 8px;
+              height: 32px;
+              width: 32px;
+              border-radius: 50%;
+              background-color: rgba(220,220,220,1);
+              box-shadow: 0px 3px 8px 0px rgba(0,0,0,.1);
+            }
+          }
+        }
+      }
+    }
+    .buttons{
+      display: flex;
+      .button-element {
+        margin: 0 8px;
+        &:first-of-type{
+          margin: 0 8px 0 0;
+        }
+        &:last-of-type{
+          margin: 0 0 0 8px;
+        }
+      }
+    }
+    .empty-qr-code-text {
+      margin: 10px 0;
+    }
+    .download-button-container {
+      margin: 20px 0;
+      width: 50%;
+      .download-button {
+        text-align: center;
+      }
+    }
+  }
+}
+.create-reward-modal{
+  .reward-modal-div{
+    padding: 10px;
+    width: 95%;
+    .item{
+      margin: 20px 0;
+      width: 100%;
+      label {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: gray;
+        }
+      }
+      textarea {
+        height: auto;
+      }
+    }
+    .code-generator-button{
+      margin-top: 10px;
+      width: fit-content;
+    }
+    .buttons{
+      display: flex;
+      .button-element {
+        margin: 0 8px;
+        &:first-of-type{
+          margin: 0 8px 0 0;
+        }
+        &:last-of-type{
+          margin: 0 0 0 8px;
+        }
+      }
+    }
+  }
+}

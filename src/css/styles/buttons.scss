@@ -1,0 +1,96 @@
+@import './colors'; 
+
+.button{
+  background-color: $primary-color;
+  &.delete{
+    background-color: rgb(200, 0, 50);
+  }
+
+  &.clear{
+    background-color: rgba(0,0,0,0);
+    color: #333;
+    border: 1px solid #777;
+    &:hover:not(:disabled){
+      box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.15);
+      text-decoration: none;
+    }
+    &:active:not(:disabled){
+      box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.3);
+    }
+  }
+}
+.button-element button, 
+.button-element input[type=submit],
+.button{
+  -webkit-appearance: none;
+  position: relative;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 16px;
+  border: 0px solid black;
+  border-radius: 3px;
+  font-size: 16px;
+  outline:none;
+  cursor: pointer;
+  width:100%;
+  color: #FFF;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.21, 0.6, 0.47, 0.82);
+  overflow: hidden;
+
+  &:hover:not(:disabled){
+    box-shadow: inset 0px 0px 250px 0px rgba(255,255,255,.15);
+    text-decoration: none;
+  }
+  &:active:not(:disabled){
+    box-shadow: inset 0px 0px 250px 0px rgba(255,255,255,.3);
+  }
+  &:disabled{
+    cursor: not-allowed;
+    opacity: .5;
+  }
+  
+}
+
+.sns-button{
+  margin: 0 0 16px 0;
+  padding: 0 40px;
+  position: relative;
+  overflow: hidden;
+  &:before{
+    position: absolute;
+    display: block;
+    left: 6px;top: 6px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 28px;
+    content: "";
+    height: 28px;
+    width: 28px;
+    border-radius: 3px;
+  }
+
+  &.facebook-button{
+    background-color: #3b5998;
+    &:before{
+      background-image: url("../../css/imgs/sns-icon-facebook.svg");
+    }
+  }
+  &.google-button{
+    background-color: #4285F4;
+    &:before{
+      background-color: #FFF;
+      background-image: url("../../css/imgs/sns-icon-google.svg");
+    }
+  }
+
+  &:last-of-type{
+    margin: 0;
+  }
+}
+
+

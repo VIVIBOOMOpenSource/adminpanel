@@ -1,0 +1,90 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.branch{
+  position: relative;
+  .branch-container{
+    display: flex;
+    .branch-category-content{
+      width: 160px;
+      margin: 0 20px 0 0;
+      ul{
+        li{
+          border-radius: 3px;
+          margin: 0 0 4px;
+          padding: 8px;
+          cursor: pointer;
+          &.active,
+          &:hover{
+            background-color: $primary-color;
+            color: #FFF;
+          }
+        }
+      }
+    }
+    .branch-content{
+      flex: 1;
+      .branch-header{
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+      }
+      .branch-details {
+        margin: auto;
+        width: 80%;
+        .branch-ctn {
+          width: 100%;
+          margin: 30px auto;
+          background-color: #fff;
+          padding: 20px;
+          .branch-detail {
+            .emails-container {
+              margin-bottom: 18px;
+              padding: 10px;
+              margin-top: 20px;
+              border-radius: 5px;
+              box-shadow: 0px 0px 8px 0px rgba(200,200,200,1);
+              .email-input-item {
+                display: flex;
+                .button-element {
+                  margin: 0 0 0 12px;
+                  width: 40px;
+                  min-width: 40px;
+                  button{
+                    padding: 0;
+                    color: rgba(0,0,0,0);
+                  }
+                }
+              }
+              .add-button {
+                width: 40px;
+                min-width: 40px;
+                button{
+                  padding: 0;
+                  color: rgba(0,0,0,0);
+                }
+              }
+            }
+            label {
+              font-size: large;
+              font-weight: bold;
+            }
+            .input-item {
+              margin: 20px 0;
+              display: flex;
+              .button-element {
+                margin: 0 0 0 12px;
+                width: 40px;
+                min-width: 40px;
+                button{
+                  padding: 0;
+                  color: rgba(0,0,0,0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

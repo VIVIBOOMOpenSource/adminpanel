@@ -1,0 +1,29 @@
+@import '../../../../css/styles/colors';
+@import '../../../../css/styles/variables';
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,900&display=swap');
+
+.tinkering-studio-container {
+  position: absolute;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  .tinkering-studio-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .animated {
+    transition: all 1s ease-out;
+  }
+  .hide-right {
+    transform: translateX(100vw);
+  }
+  .hide-left {
+    transform: translateX(-100vw);
+  }
+}

@@ -1,0 +1,32 @@
+
+.sensor-container {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  z-index: 200;
+  display: flex;
+  flex-direction: row;
+  margin: 0 10px;
+}
+
+.sensor-data-container {
+  background-color: #fff;
+  padding: 0px 15px;
+  border-radius: 12px;
+  width: 200px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+  .sensor-value-container {
+    .sensor-value-title {
+      font-weight: 600;
+    }
+    .sensor-value {
+      margin-top: 8px;
+    }
+  }
+}

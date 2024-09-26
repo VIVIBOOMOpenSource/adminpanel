@@ -1,0 +1,104 @@
+.starter-criteria-page {
+  position: relative;
+  padding: 0 0 50px 0;
+
+  .starter-criteria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 30px 0;
+
+    .starter-criteria-header-title {
+      font-size: 28px;
+      margin: 0 0 0 20px;
+      font-weight: 700;
+    }
+
+    .header-button {
+      display: flex;
+      width: 250px;
+      min-width: 250px;
+
+      .button {
+        padding: 0;
+      }
+    }
+
+  }
+
+  .starter-criteria-content {
+    flex: 1;
+    
+    .starter-criteria-description-title {
+      padding: 5px 20px 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .starter-criteria-description {
+      padding: 5px 20px 0;
+    }
+    
+    .starter-criteria-note {
+      padding: 10px 20px 0;
+      font-size: 14px;
+    font-weight: 500;
+    }
+
+    .event-requirement-container {
+      padding: 20px 20px 0;
+      background-color: #fff;
+
+      .event-requirement-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+
+      .section-title {
+        font-size: 15px;
+        font-weight: 500;
+      }
+      
+      .section-description {
+        font-size: 14px;
+      }
+
+      .event-requirement-inputs {
+        margin: 20px 0;
+        display: flex;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          display: none;
+        }
+      }
+    }
+
+    .submit {
+      padding: 10px 20px 20px;
+
+      .warning-message {
+        color: red;
+        text-align: center;
+      }
+
+      .edit-buttons {
+        display: flex;
+        justify-content: center;
+
+        .button-element {
+          margin: 10px 20px 0 20px;
+          width: 50%;
+          min-width: 40px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .starter-criteria-disabled-content {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,154 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.button-element{
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
+  
+  .background{
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $primary-color;
+    transition: opacity 0.3s linear;
+  }
+  &.delete{
+    .background{
+      background-color: rgba(200,0,50,1);
+    }
+  }
+  &.submit-form{
+    min-width: 200px;
+    width: 50%;
+    border-radius: 20px;
+    margin: 50px auto 0 auto;
+    .background{
+      background-color: #7353ff;
+    }
+  } 
+  &.clear{
+    .background{
+      border: 1px solid rba(100,100,100,1);
+      background-color: rgba(0,0,0,0);
+
+    }
+    button {
+      border: 1px solid rgba(150,150,150,1);
+      color: #333;
+      &:hover{
+        box-shadow: inset 0 0 250px 0 rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0 0 250px 0 rgba(0,0,0,.2);
+      }
+    }
+  }
+  &.disabled{
+    .background{
+      opacity: 0.5;
+    }
+  }
+  &.cancel{
+    .background{
+      background-color: rgba(240,240,240,1);
+    }
+    svg{
+      .real-path{
+        fill: #333;
+      }
+    }
+    input,
+    button{
+      color: #333;
+      &:hover{
+        box-shadow: inset 0 0 250px 0 rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0 0 250px 0 rgba(0,0,0,.2);
+      }
+    }
+    
+  }
+
+  .no-image{
+    display: none;
+  }
+  
+  &.no-image{
+    .button-status-image{
+      opacity: 0;
+      display: none;
+    }
+  } 
+
+  .button-status-image {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 8px; right: 8px;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    transition: display 0.3s,opacity 0.3s cubic-bezier(0.21, 0.6, 0.47, 0.82);
+    transition-delay: display 0.3s;
+  }
+  input,
+  button{
+    padding: 0 36px 0 16px;
+    background-color: rgba(0,0,0,0);
+    z-index: 15;
+  }
+
+  &.loading .button-status-image {
+    -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+    transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+
+    div, div:after {
+      z-index: 11;
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      border: 2px solid #fff;
+      border-top-color:#555;
+      border-radius: 50%;
+    }
+    div {
+      -webkit-animation: lds-rolling 0.65s $loading-cubic-bezier infinite;
+      animation: lds-rolling 0.65s $loading-cubic-bezier infinite;
+      top: 50%;
+      left: 50%;
+    }
+    div:after {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+  }
+}
+
+
+@keyframes lds-rolling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes lds-rolling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+

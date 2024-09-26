@@ -1,0 +1,103 @@
+@import '../../../css/styles/variables';
+
+.my-account{
+  margin: 0 auto;
+  max-width: 600px;
+
+  .forgot-password{
+    margin: 0 12px;
+    font-size: 13px;
+    display: inline-block;
+    a{
+      color: #555;
+      text-decoration: underline;
+    }
+  }
+
+  .account-type,
+  .payment-details,
+  .link-sns-accounts,
+  .profile-details,
+  .general-setting,
+  .danger-zone{
+    margin: 40px 0;
+    border-radius: 3px;
+    background-color: #FFF;
+    padding: 20px;
+    &:first-of-type{
+      margin-top: 0;
+    }
+  }
+  .danger-zone{
+    h3{
+      color: rgba(200,0,50,1);
+    }
+    .danger-items{
+      border: 1px solid rgba(200,0,50,1);
+      border-radius: 3px;
+      padding: 12px;
+      h4,p{
+        margin: 0;
+      }
+      p{
+        font-size: 15px;
+      }
+
+      .delete-account{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .button-element{
+          background-color: red;
+          max-width: 160px;
+          button{
+            padding: 0 24px 0 0;
+          }
+        }
+
+      }
+    }
+  }
+
+  .profile-details{
+    .profile-detail{
+      > div{
+        display: flex;
+        .button-element {
+          margin: 0 0 0 12px;
+          width: 40px;
+          min-width: 40px;
+          button{
+            padding: 0;
+            color: rgba(0,0,0,0);
+          }
+        }
+      }
+      &:last-of-type{
+        input{
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .checkbox-div{
+    display: flex;
+    margin: 0 0 8px 0;
+    &:last-of-type{
+      margin: 0;
+    }
+    input{
+      padding: 12px;
+      height: 16px;
+      width: 16px;
+      margin: 0 8px 0 0;
+    }
+    .frequency{
+      margin: 0 8px;
+      font-size: 11px;
+    }
+  }
+
+}

@@ -1,0 +1,165 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.survey-builder {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  .heading {
+    font-weight: 500;
+    margin: 0;
+    input {
+      margin: 0;
+    }
+  }
+  .image {
+    .no-image {
+      margin: 20px 0;
+    }
+  }
+  .cropper-workshop {
+    width: 720px;
+    height: 480px;
+    margin: auto;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .dimmed-background {
+    background: #000;
+    opacity: 0.5;
+    position: fixed; /* important to use fixed, not absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* may not be necessary */
+  }
+
+  .question-list {
+    background-color: #f0f0f0;
+    padding: 0 30px;
+    border: 1px solid #c0c0c0;
+    border-radius: 12px;
+    margin: 20px 0;
+    .question-field {
+      display: flex;
+      padding-top: 16px;
+      margin: 0;
+      &:first-child {
+        border: none;
+      }
+      .question-index {
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      .question-container {
+        flex-grow: 1;
+        .question-form {
+          .header {
+            font-weight: 600;
+            padding: 0 5px 5px 2px;
+            &.missing {
+              color: #f20000;
+            }
+          }
+          .question-input {
+            margin-bottom: 12px;
+          }
+          .option {
+            margin: 12px;
+            .options {
+              margin-bottom: 0;
+            }
+            .option-buttons {
+              display: flex;
+              button {
+                padding: 6px;
+                margin-left: 6px;
+              }
+            }
+          }
+          .add-option {
+            margin: 20px;
+          }
+        }
+        .action-buttons {
+          display: flex;
+          margin-top: 20px;
+          span {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    .no-question {
+      margin: 20px 0;
+    }
+  }
+  .complete-button {
+    // border-radius: 4px;
+    // border: 1px outset black;
+    // display: inline-block !important;
+    // width: 80px;
+    font-size: 14px;
+    background-color: #5cb85c;
+    align-self: center;
+  }
+  .move-buttons {
+    display: flex;
+    height: fit-content;
+    margin-left: 10px;
+  }
+  .move-button {
+    background-color: $secondary-color;
+    padding: 6px;
+    margin-left: 6px;
+    .icon {
+      transform: rotate(90deg);
+    }
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+  .save-button {
+    background-color: $primary-color;
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+  .edit-button {
+    background-color: #808080;
+    &:hover {
+      background-color: #909090;
+    }
+  }
+  .delete-button {
+    background-color: #f20000;
+    &:hover {
+      background-color: #ff0000;
+    }
+  }
+  .icon {
+    // margin-right: 0.5em;
+    width: 20px;
+    height: auto;
+    fill: #fff;
+  }
+  .questions-ctn {
+    button {
+      display: flex;
+      align-items: center;
+      max-width: 150px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+  }
+}

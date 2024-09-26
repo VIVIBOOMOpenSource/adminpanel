@@ -1,0 +1,235 @@
+@import "../../../css/styles/variables";
+@import "../../../css/styles/colors";
+
+.event-facilitators {
+  .heading {
+    font-weight: 500;
+    margin: 36px 0 12px;
+  }
+  .subtitle {
+    font-size: 15px;
+    margin: 0;
+  }
+  .no-margin {
+    margin: 0;
+  }
+  .item-row {
+    display: flex;
+    align-items: center;
+    // flex-wrap:wrap;
+    > ul {
+      height: auto;
+      max-width: 80%;
+      display: flex;
+      align-items: flex-start;
+      margin: 0 12px 0 0;
+      min-width: 360px;
+      flex-wrap: wrap;
+      &.facilitators-container {
+        > li {
+          min-height: 200px;
+        } 
+      }
+      > li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        margin: 8px;
+        display: flex;
+        width: 140px;
+        height: 100%;
+        padding: 15px 8px 8px 8px;
+  
+        .image {
+          margin: 12px 0;
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+        }
+        .facilitator-name {
+          margin: 0;
+          font-size: larger;
+        }
+        .facilitator-skills {
+          margin: 0;
+          font-weight: 400;
+          text-align: center;
+          font-size: 14px;
+        }
+        .op-buttons {
+          display: flex;
+          flex-direction: row;
+          margin-top: 8px;
+          .delete-button, .edit-button {
+            cursor: pointer;
+            border: 0;
+            background-color: red;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 6px;
+            svg {
+              width: 18px;
+              height: 18px;
+              fill: #fff;
+            }
+            &.greyed {
+              opacity: 0.3;
+              pointer-events: none;
+              cursor: default;
+            }
+          }
+          .edit-button {
+            background-color: rgb(0, 209, 101);
+          }
+        }
+        
+        &:hover {
+          .hover-buttons {
+            display: flex;
+          }
+        }
+      }
+    }
+    .add-facilitator {
+      width: 80%;
+      max-width: 160px;
+      margin: 40px 0 18px;
+      height: 40px;
+      border-radius: 12px;
+      background-color: $primary-color;
+      .add-button {
+        color: white;
+        font-size: 16px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        input {
+          display: none;
+        }
+        &.disabled {
+          cursor: not-allowed;
+        }
+        &.greyed {
+          pointer-events: none;
+          background-color: grey;
+          border-radius: 12px;
+          &.error-text {
+            color: red;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 595px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.facilitator-modal {
+  overflow: inherit !important;
+  .modal-close-button {
+    display: flex;
+    color: #ccc;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .facilitator-modal-container {
+    padding: 8px;
+    h4 {
+      margin: 0;
+      font-size: large;
+    }
+    .facilitator-selects {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin: 24px 0 0 0;
+      .facilitator-select {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 12px 0;
+        .label {
+          margin: 0 8px;
+          font-size: 17px;
+          width: 50px;
+          text-align: left;
+          margin-right: 50px;
+        }
+        .facilitator-dropdown {
+          width: 240px;
+          height: 40px;
+          font-weight: 500;
+          font-size: medium;
+          input {
+            height: 100%;
+          }
+        }
+    
+        .custom-option {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-weight: 400;
+          font-size: medium;
+    
+          img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+      .separator-text {
+        font-size: 14px;
+      }
+      .skills {
+        margin-top: 36px;
+      }
+      .modal-error-message {
+        color: red;
+        height: 30px;
+        margin: 0;
+        
+      }
+      input {
+        margin: 0;
+        width: 240px;
+        height: 38px;
+        padding: 0 8px;
+        font-weight: 500;
+        font-size: medium;
+        background-color: hsl(0, 0%, 100%);
+        border-color: hsl(0, 0%, 80%);
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 1px;
+      }
+    }
+    .facilitator-button {
+      width: 88px;
+      button {
+        z-index: inherit;
+      }
+      .button-status-image {
+        display: none;
+      }
+    }
+  }
+}

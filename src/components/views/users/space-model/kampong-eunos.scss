@@ -1,0 +1,11 @@
+.kampong-eunos-container {
+  position: relative;
+  .kampong-eunos-background {
+    position: absolute;
+    // special case: extend outside the screen
+    top: -36%;
+    left: -85%;
+    height: 170%;
+    width: 288%;
+  }
+}

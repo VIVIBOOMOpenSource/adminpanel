@@ -1,0 +1,31 @@
+.comment-modal{
+  .comment-modal-div{
+    .item{
+      margin: 0 0 20px;
+      label {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: gray;
+        }
+      }
+      textarea {
+        height: auto;
+      }
+    }
+    .buttons{
+      display: flex;
+      .button-element {
+        margin: 0 8px;
+        &:first-of-type{
+          margin: 0 8px 0 0;
+        }
+        &:last-of-type{
+          margin: 0 0 0 8px;
+        }
+      }
+    }
+  }
+}

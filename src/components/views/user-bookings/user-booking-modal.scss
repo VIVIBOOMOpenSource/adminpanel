@@ -1,0 +1,41 @@
+.modal :first-child.user-booking-modal {
+  overflow: auto;
+  max-width: 720px;
+}
+
+.user-booking-modal {
+  max-height: 95vh;
+  max-width: 720px;
+
+  select,
+  multi-select {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  .carousel-header {
+    margin: 0 0 16px;
+  }
+
+  textarea {
+    height: 80px;
+    position: unset;
+    margin-bottom: 24px;
+  }
+
+  .select-container {
+    margin-bottom: 24px;
+    z-index: 10000000000;
+  }
+
+  .status-message {
+    margin-top: 120px;
+  }
+
+  .user-quota {
+    margin: 10px 0;
+    font-size: small;
+  }
+}

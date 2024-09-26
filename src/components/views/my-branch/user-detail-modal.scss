@@ -1,0 +1,91 @@
+.modal :first-child.user-detail-modal{
+  max-width: 70%;
+}
+.user-detail-modal{
+  max-height: 95vh;
+  select{
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin: 0 0 12px;
+  }
+  .carousel-header{
+    margin: 0 0 16px;
+  }
+  .notes{
+    textarea{
+      min-height: 500px;
+    }
+  }
+  .profile-details{
+    .image{
+      margin: 0 0 24px 0;
+      img{
+        max-height: 120px;
+      }
+      label{
+        margin: 8px 0 0 0;
+        max-width: 240px;
+      }
+      input{
+        display: none;
+      }
+    }
+  }
+  .item{
+    margin: 0 0 20px;
+    label {
+      font-weight: bold;
+    }
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: gray;
+      }
+    }
+    textarea {
+      height: auto;
+    }
+    select {
+      z-index: 1000;
+    }
+  }
+  .staff-select{
+    display: block;
+    margin: 0 0 250px;
+  }
+  .danger-zone {
+    .account-status {
+      margin-bottom: 24px;
+      .account-status-select {
+        border: 1px #ddd solid;
+        border-radius: 4px;
+      }
+      .status-description {
+        font-size: 12px;
+      }
+    }
+    .ban-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .ban-btn {
+        width: 300px;
+      }
+    }
+  }
+  .email-row {
+    padding: 4px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .email-verified {
+    font-size: small;
+    display: flex;
+    justify-content: center;
+  }
+  .skip-verify-text {
+    margin: 0 0 0 4px;
+  }
+}

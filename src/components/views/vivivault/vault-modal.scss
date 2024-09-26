@@ -1,0 +1,52 @@
+.modal :first-child.comment-modal{
+  max-width: 720px;
+}
+.comment-modal{
+  .entry-options{
+    margin: 0 10px 0 0;
+  }
+  .comment-modal-div{
+    padding: 10px;
+    margin: 0 10px 0 0 ;
+    .item{
+      margin: 0 0 20px;
+      width: 100%;
+      label {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: gray;
+        }
+      }
+      textarea {
+        height: auto;
+      }
+    }
+    .empty-qr-code-text {
+      margin: 10px 0;
+    }
+    .download-button-container {
+      margin: 20px 0;
+      width: 50%;
+      .download-button {
+        text-align: center;
+      }
+    }
+  }
+  
+  .buttons{
+    display: flex;
+    margin: 10px 20px 0 20px;
+    .button-element {
+      margin: 0 8px;
+      &:first-of-type{
+        margin: 0 8px 0 0;
+      }
+      &:last-of-type{
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+}

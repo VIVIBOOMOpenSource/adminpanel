@@ -1,0 +1,173 @@
+.create-user-pdf-ph {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 816px;
+  height: 1054px;
+  background-color: #fff;
+  color: black;
+  padding: 60px 90px;
+  // font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.01px;
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .agreement-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 18px;
+    .title {
+      margin: 18px;
+      font-weight: 800;
+      font-size: 16px;
+    }
+    .subtitle {
+      .text {
+        font-size: 16px;
+        margin-bottom: 18px;
+        font-weight: 500;
+        text-align: justify;
+      }
+    }
+    .tables {
+      width: 100%;
+      .table-title {
+        font-size: 16px;
+        font-weight: 800;
+        margin: 18px 0;
+      }
+      .table {
+        width: 100%;
+        border: 1px solid black;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        .table-row {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          border-bottom: 1px solid black;
+          .field {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .field-name {
+              padding-left: 5px;
+              width: 150px;
+              height: 28px;
+              line-height: 28px;
+              border-right: 1px solid black;
+              text-align: start;
+            }
+            .field-value {
+              padding-right: 5px;
+              height: 28px;
+              line-height: 28px;
+              margin-left: auto;
+            }
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    .agreements {
+      .subsection-title {
+        margin-top: 24px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .texts {
+        padding-left: 12px;
+        .row {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          .tick {
+            margin-right: 10px;
+          }
+          .text {
+            font-weight: 500;
+            font-size: 15px;
+            margin-bottom: 0;
+            text-align: justify;
+          }
+        }
+      }
+    }
+    .signature-ctn {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .signatures {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .signature {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 300px;
+          .name-and-signature {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .guardian-name {
+              margin-right: 12px;
+            }
+            img {
+              height: 50px;
+            }
+          }
+          .text {
+            width: 100%;
+            border-top: 1px solid black;
+            padding-top: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+          }
+          .date-signed {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            .subtitle {
+              margin-right: 8px;
+            }
+            .date {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .verify {
+      margin-top: 30px;
+      margin-left: auto;
+      font-size: 13px;
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-size: 13px;
+      margin: 0
+    }
+  }
+}

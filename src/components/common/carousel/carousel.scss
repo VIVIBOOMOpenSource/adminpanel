@@ -1,0 +1,31 @@
+@import "../../../css/styles/colors";
+@import "../../../css/styles/variables";
+
+.carousel {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  transition: height 0.5s $cubic-bezier-default;
+  max-height: 70vh;
+
+  .carousel-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    transition: left 0.5s $cubic-bezier-default;
+    & > div {
+      flex: 1;
+      min-width: 0;
+      width: 100%;
+      padding: 10px;
+      height: auto;
+      float: left;
+      opacity: 0;
+      transition: opacity 0.5s linear;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

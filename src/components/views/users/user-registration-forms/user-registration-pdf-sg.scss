@@ -1,0 +1,187 @@
+.create-user-pdf-sg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 816px;
+  height: 1054px;
+  background-color: #fff;
+  color: black;
+  padding: 30px 60px;
+  // font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.01px;
+  .logo {
+    img {
+
+    }
+  }
+  .agreement-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      margin: 10px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .subtitle {
+      margin-left: auto;
+      font-size: 14px;
+    }
+    .tables {
+        width: 100%;
+      .table {
+        width: 100%;
+        border: 2px solid black;
+        font-size: 13px;
+        text-align: center;
+        .table-header {
+          width: 100%;
+          font-weight: bold;
+          background-color: #ddd;
+          height: 30px;
+          line-height: 30px;
+          border-bottom: 2px solid black;
+        }
+        .table-row {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          border-bottom: 2px solid black;
+          .field {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            border-right: 2px solid black;
+            .field-name {
+              padding-left: 5px;
+              width: 128px;
+              height: 25px;
+              line-height: 25px;
+              border-right: 2px solid black;
+              text-align: start;
+            }
+            .field-value {
+              padding-left: 5px;
+              height: 25px;
+              line-height: 25px;
+              text-align: start;
+            }
+            &:last-child {
+              border-right: 0;
+            }
+          }
+          .field-address {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .field-name {
+              padding-left: 5px;
+              width: 128px;
+              height: 25px;
+              line-height: 25px;
+              border-right: 2px solid black;
+              text-align: start;
+            }
+            .field-value {
+              padding-left: 5px;
+              height: 25px;
+              line-height: 25px;
+              text-align: start;
+            }
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+        &:last-child {
+          border-top: 0;
+        }
+      }
+    }
+    .second-title {
+      margin-top: 45px;
+      text-decoration: underline;
+    }
+    .policies {
+      p {
+        margin: 0;
+        font-size: 13px;
+      }
+      .point {
+        margin: 20px 0;
+        .text {
+          padding-left: 10px;
+        }
+      }
+    }
+    .agreements {
+      p {
+        margin: 0 0 5px 0;
+        font-size: 13px;
+      }
+      .subsection-title{
+        font-weight: 700;
+        padding-top: 15px;
+        text-decoration: underline;
+        font-size: 14px;
+      }
+    }
+    .signature-ctn {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .subsection-title {
+        font-weight: 700;
+        font-size: 13px;
+      }
+      .signatures {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .signature {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 33.3%;
+          img {
+            height: 50px;
+          }
+          .date {
+            height: 50px;
+            display: flex;
+            align-items: flex-end;
+          }
+          .text {
+            width: 90%;
+            border-top: 1px solid black;
+            font-size: 13px;
+          }
+          &:last-child {
+            .text {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .verify {
+      margin-top: 30px;
+      margin-left: auto;
+      font-size: 13px;
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-size: 13px;
+      margin: 0
+    }
+  }
+}

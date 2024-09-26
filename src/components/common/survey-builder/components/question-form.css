@@ -1,0 +1,14 @@
+.question-form .option {
+    display: flex;
+}
+
+.question-form .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.question-form button {
+    background: none;
+    color: #0366ee;
+    margin-left: 0.2em;
+}

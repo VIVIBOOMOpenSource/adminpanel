@@ -1,0 +1,20 @@
+.danger-zone {
+    .account-status {
+      margin-bottom: 24px;
+      .account-status-select {
+        border: 1px #ddd solid;
+        border-radius: 4px;
+      }
+      .status-description {
+        font-size: 12px;
+      }
+    }
+    .btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .single-btn {
+        width: 300px;
+      }
+    }
+}

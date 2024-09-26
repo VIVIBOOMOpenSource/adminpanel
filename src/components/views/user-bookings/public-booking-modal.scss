@@ -1,0 +1,69 @@
+.modal :first-child.public-booking-modal {
+    overflow: auto;
+    max-width: 720px;
+}
+
+.public-booking-modal {
+    max-height: 95vh;
+    max-width: 720px;
+
+    select,
+    multi-select {
+        display: block;
+        height: 40px;
+        width: 100%;
+        margin: 0 0 24px;
+    }
+
+    .carousel-header {
+        margin: 0 0 16px;
+    }
+
+    textarea {
+        height: 80px;
+        position: unset;
+        margin-bottom: 24px;
+    }
+
+    .select-container {
+        margin-bottom: 24px;
+        z-index: 10000000000;
+    }
+
+    .input-row {
+        display: flex;
+        flex-direction: row;
+        z-index: -1;
+
+        .input-container {
+            margin-bottom: 12px;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 50%;
+        }
+    }
+
+
+    .status-message {
+        margin-top: 30px;
+    }
+
+    .user-quota {
+        margin: 10px 0;
+        font-size: small;
+    }
+
+    .workshop-responses {
+        .workshop-question {
+            margin-bottom: 12px;
+
+            .workshop-answer {
+                margin-left: 24px;
+
+                input {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

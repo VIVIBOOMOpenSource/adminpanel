@@ -1,0 +1,231 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.modal :first-child.booking-modal{
+  min-width: 80%;
+}
+
+.booking-modal {
+  select,
+  multi-select {
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin: 0 0 12px;
+    z-index: 100;
+  }
+  .react-datetime-picker {
+    width: 60%;
+    z-index: 10;
+
+    .react-datetime-picker__wrapper {
+      border: 0px;
+    }
+    select {
+      width: 50px;
+      display: inline-block;
+      border: 1px solid rgb(220, 220, 220);
+    }
+  }
+  input {
+    position: unset;
+    margin-bottom: 24px;
+  }
+  .event-type-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .event-type-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    button {
+      border: 0;
+    }
+    .event-type-button-active{
+      background-color: $primary-color;
+      border-radius: 8px;
+      cursor: pointer;
+      .text{
+        color: #fff;
+        margin: 10px;
+      }
+    }
+    .event-type-button{
+      border-radius: 8px;
+      border-color: $primary-color;
+      cursor: pointer;
+      .text{
+        color: $primary-color;
+        margin: 10px;
+      }
+    }
+    .event-type-details {
+      align-self: center;
+      position:relative;
+      margin-left: 20px;
+      margin-top: 5px;
+      input {
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+  .date-container {
+    display: flex;
+    .date {
+      flex: 1;
+      input {
+        margin-bottom: 0;
+      }
+    }
+    margin-bottom: 8px;
+  }
+  .bulk-create {
+    font-size: 14px;
+  }
+  .last-register-container {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    .last-register-inputs {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      .last-register-select {
+        border: 1px #ddd solid;
+        border-radius: 4px;
+        width: 300px;
+        z-index: auto;
+        margin-right: 48px;
+      }
+      .date {
+        .react-datetime-picker {
+          z-index: auto;
+        }
+        .react-datetime-picker--disabled {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .slots {
+    margin-bottom: 23px;
+  }
+  .event-access-select {
+    border: 1px #ddd solid;
+    border-radius: 4px;
+  }
+  .days-picker {
+    margin-top: 18px;
+  }
+  .workshop {
+    margin-bottom: 20px;
+    input {
+      margin-right: 8px;
+    }
+  }
+  .ready-publish {
+    input {
+      margin-right: 8px;
+    }
+  }
+  .schedule-date {
+    input {
+      margin-right: 8px;
+    }
+  }
+  .publish-date {
+    float: left;
+    width: 50%;
+    margin: 0 20px;
+  }
+  .workshop-desc {
+    height: 150px;
+    label span {
+      color: red;
+    }
+    textarea {
+      height: 100px;
+    }
+  }
+  .survey-builder {
+    padding: 0;
+    // margin-bottom: 30px;
+  }
+  .workshop-question {
+    margin-bottom: 12px;
+    .workshop-answer {
+      margin-left: 24px;
+      input {
+        margin-right: 4px;
+      }
+    }
+  }
+  .workshop-form {
+    h3 {
+      white-space: pre-wrap;
+    }
+    .export-buttons {
+      display: flex;
+      flex-direction: row;
+      margin: 64px 0 0 0;
+      justify-content: space-between;
+      .export-button {
+        width: 48%;
+      }
+    }
+  }
+  .wrapper.rdw-editor-wrapper {
+    min-height: 120px;
+    // max-height: 360px;
+    border: 1px solid rgba(240, 240, 240, 1);
+    padding: 0 8px;
+    border-radius: 3px;
+    margin: 20px auto;
+     // width: 100% !important;
+  }
+
+  .email-tags {
+    border: 1px solid #c0c0c0;
+    border-collapse: collapse;
+    padding: 5px;
+    margin:auto;
+    text-align: center;
+    font-size: 14px;
+    max-width: 80%;
+    th {
+      border: 1px solid #c0c0c0;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+
+    td {
+      border: 1px solid #c0c0c0;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+  }
+
+  .public-DraftEditor-content {
+    word-break: keep-all;
+  }
+  .csv-download{
+    display:none;
+  }
+  .save-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    .publish-btn {
+      margin: 0 80px;
+      max-width: 500px;
+    }
+    .warning {
+      .background {
+        background-color: rgba(200,0,50,1);
+      }
+    }
+  }
+}

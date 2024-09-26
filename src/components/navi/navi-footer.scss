@@ -1,0 +1,96 @@
+@import '../../css/styles/colors';
+@import '../../css/styles/variables';
+
+.navi-footer{
+  .navi-footer-button{
+    border-radius: 5px;
+    margin: 8px;
+    display: flex;
+    height: 32px;
+    cursor: pointer;
+    .icon{
+      height: 100%;
+      width: 32px;
+      padding: 4px;
+      position: relative;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: #FFF;
+        }
+      }
+    }
+    .text{
+      margin: 0 4px;
+      line-height: 32px;
+      color: #FFF;
+    }
+    &:hover{
+      transition: all 0.3s;
+      background-color: #FFF;
+      .icon svg .real-path{
+        fill: $primary-color;
+      }
+      .text{
+        color: $primary-color;
+      }
+
+    }
+  }
+}
+@media screen and (min-width: $desktop-width) {
+  .navi-main.toggle-width-active{
+    .navi-footer{
+      .navi-footer-button{
+        justify-content: center;
+        align-items: center;
+        .text{
+          position: absolute;
+          left: 60px;
+          opacity: 0;
+          transition: left 0.3s,opacity 0.3s;
+          border-radius: 3px;
+          padding: 6px 12px;
+          height: 44px;
+          width: auto;
+          padding: 0;
+          width: 0px;
+          height: 0px;
+          z-index: 100;
+          background-color: $primary-color;
+          color: #FFF;
+          box-shadow: 0px 1px 3px 0px rgba(0,0,0,.2);
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        &:hover{
+          .text{
+            overflow: visible;
+            left: 66px;
+            opacity: 1;
+            display: flex;
+            padding: 0px 12px;
+            line-height: 32px;
+            height: 32px;
+            width: auto;
+            &::before{
+              height: 0px;
+              padding: 0px;
+              position: absolute;
+              top: 8px;
+              left: -16px;
+              display: block;
+              content:"h";
+              font-size: 0px;
+              border-top: 8px solid transparent;
+              border-right: 8px solid $primary-color;
+              border-left: 8px solid transparent;
+              border-bottom: 8px solid transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

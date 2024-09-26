@@ -1,0 +1,14 @@
+
+$mobile-width: 779px;
+$desktop-width: $mobile-width+1;
+
+$header-height: 60px;
+$navi-height: 40px;
+$header-z-index: 50;
+
+$cubic-bezier-default: cubic-bezier(0.65, 0.22, 0.13, 0.93);
+$cubic-bezier-default-reverse: cubic-bezier(0.93, 0.13, 0.22, 0.65);
+// $loading-cubic-bezier: cubic-bezier(0.62, 0.41, 0.34, 0.64);
+$loading-cubic-bezier: cubic-bezier(0.75, 0.35, 0.34, 0.64);
+
+$ios-present-cubic-bezier: cubic-bezier(0.95, 0.29, 0.59, 0.79);

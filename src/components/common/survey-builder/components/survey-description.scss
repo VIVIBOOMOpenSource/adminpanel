@@ -1,0 +1,16 @@
+.booking-description {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  margin-top: 12px;
+  .heading {
+    margin-right: 0.3em;
+    font-weight: 500;
+  }
+  textarea  {
+    height: 200px;
+    margin: 24px 0;
+  }
+}
+
+

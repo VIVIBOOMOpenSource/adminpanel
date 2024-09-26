@@ -1,0 +1,128 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.role-user {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  padding: 10px;
+  .add-role-user {
+    margin-bottom: 15px;
+    width: 100%;
+    .select-ctn {
+      margin: 15px 0;
+      z-index: 1000000;
+    }
+    .text-ctn {
+      margin: 15px 0;
+      textarea {
+        width: 100%;
+        height: auto;
+        z-index: auto;
+      }
+    }
+    .add-button {
+      width: 100%;
+      background-color: $primary-color;
+      -webkit-appearance: none;
+      color: #333;
+      text-decoration: none;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      padding: 0px 16px;
+      border: 0px solid black;
+      border-radius: 3px;
+      font-size: 16px;
+      outline: none;
+      cursor: pointer;
+      width: 100%;
+      color: #FFF;
+      transition: opacity 0.3s cubic-bezier(0.21, 0.6, 0.47, 0.82);
+      overflow: hidden;
+      &:hover{
+        box-shadow: inset 0 0 250px 0 rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0 0 250px 0 rgba(0,0,0,.2);
+      }
+    }
+    .warning {
+      color: red;
+      margin: 10px 0;
+    }
+  }
+  .custom-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      width: 30px;
+      height: 35px;
+      margin: 0 20px;
+    }
+  }
+  .role-users {
+    margin: 10px 0;
+    .role-users-ctn {
+      flex: 1;
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #e4edf6;
+      .role-users-header {
+        height: 56px;
+        padding: 0 8px;
+        background-color: #f3f7fc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      ul.role-users-list{
+        margin: 0;
+        background-color: #fff;
+        > li{
+          margin: 0;
+          padding: 8px;
+          display: flex;
+          border-radius: 3px;
+          .user-info{
+            display: flex;
+            align-items: center;
+            img,.svg-container {
+              margin: 0 20px;
+              height: 32px;
+              width: 32px;
+              border-radius: 50%;
+              background-color: rgba(220,220,220,1);
+              box-shadow: 0px 3px 8px 0px rgba(0,0,0,.1);
+            }
+            .svg-container{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              svg{
+                height: 24px;
+                width: 24px;
+                .real-path{
+                  fill: #555;
+                }
+              }
+            }
+          }
+          .user-button{
+            max-width: 40px;
+            margin-left: auto;
+          }
+          .button-element {
+            .background {
+              background-color: rgba(200,0,50,1);
+            }
+          }
+          &:hover{
+            box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+          }
+        }
+      }
+    }
+  }
+}

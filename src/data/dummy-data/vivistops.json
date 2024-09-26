@@ -1,0 +1,61 @@
+[
+	{
+		"vivistop_id": "EE00001",
+		"country": "EE",
+		"region": "eu",
+		"locale":  "NULL",
+		"name": "Telliskivi",
+		"name_jp": "Telliskivi",
+		"api_key":  "NULL",
+		"contact_email": "vivistopdev+telliskivi@piccolo.co",
+		"address": "NULL",
+		"phone": "4432111"
+	},
+	{
+		"vivistop_id": "JP00001",
+		"country": "JP",
+		"region": "ap",
+		"locale":  "NULL",
+		"name": "KASHIWANOHA",
+		"name_jp": "柏の葉",
+		"api_key":  "1234567890sample",
+		"contact_email": "vivistopdev+kashiwanoha@piccolo.co",
+		"address": "千葉県柏市",
+		"phone": "0000000"
+	},
+	{
+		"vivistop_id": "JP00002",
+		"country": "JP",
+		"region": "ap",
+		"locale":  "NULL",
+		"name": "Gakugei",
+		"name_jp": "学芸",
+		"api_key":  "NULL",
+		"contact_email": "vivistopdev+gakugei@piccolo.co",
+		"address": "NULL",
+		"phone": "11223344"
+	},
+	{
+		"vivistop_id": "SG00001",
+		"country": "SG",
+		"region": "ap",
+		"locale":  "NULL",
+		"name": "Orchard",
+		"name_jp": "Orchard",
+		"api_key":  "NULL",
+		"contact_email": "vivistopdev+orchard@piccolo.co",
+		"address": "NULL",
+		"phone": "9999999"
+	}
+
+
+]
+
+
+
+
+
+
+
+
+

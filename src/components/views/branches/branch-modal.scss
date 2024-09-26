@@ -1,0 +1,33 @@
+.modal :first-child.user-modal{
+  min-width: 70%;
+}
+.branch-modal{
+  max-height: 95vh;
+  select{
+    display: block;
+    height: 40px;
+    width: 100%;
+    margin: 0 0 12px;
+  }
+  .form-container {
+    margin-top: 20px;
+  }
+  .notes{
+    textarea{
+      min-height: 500px;
+    }
+  }
+  .staff-select{
+    display: block;
+    margin: 0 0 250px;
+  }
+  .hide-save-button {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .branch-code-desc{
+    font-size: 14px;
+    color: gray;
+    margin: 0 0 10px 0;
+  }
+}

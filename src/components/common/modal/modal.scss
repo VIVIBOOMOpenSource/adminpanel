@@ -1,0 +1,116 @@
+@import '../../../css/styles/colors';
+@import '../../../css/styles/variables';
+
+.modal {
+  position: fixed;
+  overflow: hidden;
+  bottom: 0px;
+  left: 0px;
+  z-index: 210;
+  
+  &.hide-modal{
+    height: 0px;
+    width: 0px;
+    transition: height 0s, width 0s, padding 0s, overflow 0s;
+    transition-delay: 0.35s;
+    .modal-gray-screen{
+      opacity: 0;
+    }
+    :first-child.modal-main{
+      overflow: hidden;
+    }
+  }
+  &.show-modal {
+    height: 100%;
+    width: 100%;
+    .modal-gray-screen{
+      opacity: 1;
+    }
+  }
+
+  .modal-gray-screen{
+    position: absolute;
+    z-index: 205;
+    width: 100%;
+    height: 100%;
+    background: $gray-screen-background-color;
+    opacity: 1;
+    transition: opacity 0.35s;
+  }
+
+  .modal-main {
+    max-height: calc(100vh - calc(100vh - 100%));
+    overflow: auto;
+    border-radius: 3px;
+    position: relative;
+    background: white;
+    z-index: 208;
+    .modal-close-button {
+      height: 48px;
+      width: 48px;
+      top: 0px;
+      right: 0px;
+      position: absolute;
+      border-radius: 2px;
+      padding: 8px;
+      cursor: pointer;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: $primary-color;
+        }
+      }
+      z-index: 150;
+      &:hover{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.2);
+      }
+    }
+  }
+}
+  
+
+@media screen and (max-width: $mobile-width) {
+  .modal{
+    &.hide-modal{
+      .modal-main:first-child{
+        transform: scale(0.9);
+        margin-top: 100vh;
+        transition: margin-top 0.20s $ios-present-cubic-bezier,
+                    transform 0.20s $ios-present-cubic-bezier;
+      }
+    }
+    &.show-modal{
+      .modal-main:first-child{
+        transform: scale(1);
+        margin-top: 0vh;
+        transition: margin-top 0.20s $ios-present-cubic-bezier,
+                    transform 0.20s $ios-present-cubic-bezier;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .modal{
+    &.hide-modal{
+      .modal-main{
+        opacity: 0;
+        transform: scale(0.8);
+        transition: transform 0.12s $cubic-bezier-default,//ease-out, 
+                    opacity 0.12s $cubic-bezier-default;//ease-out;
+      }
+    }
+    &.show-modal {
+      .modal-main{
+        opacity: 1;
+        transform: scale(1);
+        transition: transform 0.20s $cubic-bezier-default,//ease-out, 
+                    opacity 0.20s $cubic-bezier-default;//ease-out;
+      }
+    }
+  }
+}

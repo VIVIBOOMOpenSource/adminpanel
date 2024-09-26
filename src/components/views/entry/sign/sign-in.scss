@@ -1,0 +1,185 @@
+@import "../../../../css/styles/colors";
+
+.sign-in{
+  max-width: 400px;
+  width: 100%;
+  .signin-info{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    
+    .signin-info-text{
+      color: $primary-color;
+      font-size: 21px;
+      font-weight: 700;
+      margin: 24px 0;
+      font-weight: 700;
+    }
+    .signin-options{
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0 28px 0;
+      .signin-option {
+        width: 190px;
+        height: 190px;
+        margin: 0 18px;
+        border-radius: 6px;
+        background-color: #fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        cursor: pointer;
+        &:hover {
+          box-shadow: rgba(115, 83, 255, 0.3) 0px 0px 0px 2px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          height: 80px;
+          width: 80px;
+          margin: 12px 0;
+          object-fit: contain;
+          border-radius: 50%;
+          -webkit-user-drag: none;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+        .signin-option-text {
+          color: $primary-color;
+          font-size: 20px;
+          user-select: none;
+          -webkit-user-select: none;
+          font-weight: 700;
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+  .institution-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    margin: 24px 0;
+    border-radius: 6px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    min-height: 225px;
+    .back-button {
+      height: 48px;
+      width: 48px;
+      top: 12px;
+      left: 12px;
+      position: absolute;
+      border-radius: 2px;
+      padding: 8px;
+      cursor: pointer;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: $primary-color;
+        }
+      }
+      z-index: 150;
+      &:hover{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.2);
+      }
+    }
+    .institution-info-text {
+      width: 100%;
+      text-align: left;
+      font-size: 16px;
+      line-height: 24px;
+      color: $primary-color;
+      font-weight: 600;
+    }
+    .institution-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .institution-item {
+        width: 100%;
+        font-size: 18px;
+        color: #7353ff;
+        text-align: left;
+        margin: 8px 0;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .login-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    margin: 24px 0;
+    border-radius: 6px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    .back-button {
+      height: 48px;
+      width: 48px;
+      top: 12px;
+      left: 12px;
+      position: absolute;
+      border-radius: 2px;
+      padding: 8px;
+      cursor: pointer;
+      svg{
+        height: 100%;
+        width: 100%;
+        .real-path{
+          fill: $primary-color;
+        }
+      }
+      z-index: 150;
+      &:hover{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.2);
+      }
+    }
+    form {
+      width: 100%;
+      .signin-info-text{
+        color: $primary-color;
+        font-size: 21px;
+        font-weight: 700;
+        margin: 0 0 24px 0;
+        font-weight: 700;
+      }
+      .input-container {
+        width: 100%;
+        margin: 6px 0;
+        label {
+          text-align: left;
+        }
+        input {
+          width: 100%;
+        }
+      }
+      .login-button {
+        margin: 12px 0;
+      }
+    }
+  }
+  .reset-password{
+    display: block;
+    margin: 12px 0 0 0;
+    font-weight: 600;
+  }
+}

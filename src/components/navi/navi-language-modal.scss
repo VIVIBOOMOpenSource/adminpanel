@@ -1,0 +1,21 @@
+@import '../../css/styles/colors';
+@import '../../css/styles/variables';
+
+.navi-language-modal{
+  .available-languages-list{
+    margin: 0;
+    li{
+      padding: 8px 16px;
+      transition: all 0.3s;
+      border-radius: 3px;
+      &:hover{
+        cursor: pointer;
+        background-color: $primary-color;
+        color: #FFF;
+      }
+      &:last-of-type{
+        margin: 0;
+      }
+    }
+  }
+}

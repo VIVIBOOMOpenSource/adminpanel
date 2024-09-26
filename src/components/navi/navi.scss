@@ -1,0 +1,15 @@
+@import '../../css/styles/colors';
+@import '../../css/styles/variables';
+
+.navi{
+  height: 100%;
+  position: relative;
+}
+@media screen and (max-width: $mobile-width) {
+  .navi{
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 100;
+  }
+}

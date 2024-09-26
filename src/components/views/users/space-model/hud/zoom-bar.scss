@@ -1,0 +1,54 @@
+.zoom-bar-container {
+  position: fixed;
+  bottom: 60px;
+  left: 0px;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 240px;
+  input[type=range][orient=vertical] {
+    writing-mode: vertical-lr;
+    appearance: slider-vertical;
+    width: 12px;
+    height: 144px;
+    accent-color: #fff;
+  }
+  .top-button {
+    position: absolute;
+    top: 12px;
+    border: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    svg {
+      fill: #333;
+    }
+    &:disabled {
+      svg {
+        fill: #ddd;
+      }
+    }
+  }
+  .bottom-button {
+    position: absolute;
+    bottom: 12px;
+    border: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    svg {
+      fill: #333;
+    }
+    &:disabled {
+      svg {
+        fill: #ddd;
+      }
+    }
+  }
+}

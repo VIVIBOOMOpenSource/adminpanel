@@ -1,0 +1,85 @@
+.user-badge {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0 0 50px;
+  .add-user-badge {
+    margin-bottom: 15px;
+    width: 100%;
+    .select-ctn {
+      margin: 15px 0;
+      z-index: 1000000;
+    }
+    .text-ctn {
+      margin: 15px 0;
+      textarea {
+        width: 100%;
+        height: auto;
+        z-index: auto;
+      }
+    }
+    .award-badge-button {
+      button {
+        z-index: inherit;
+      }
+    }
+  }
+  .custom-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      width: 30px;
+      height: 35px;
+      margin: 0 20px;
+    }
+  }
+  .user-badges {
+    margin: 10px 0;
+    .user-badges-ctn {
+      flex: 1;
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #e4edf6;
+      .user-badges-header {
+        height: 56px;
+        padding: 0 8px;
+        background-color: #f3f7fc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      ul.user-badges-list{
+        margin: 0;
+        background-color: #fff;
+        > li{
+          margin: 0;
+          padding: 8px;
+          display: flex;
+          border-radius: 3px;
+          .badge-info{
+            display: flex;
+            align-items: center;
+            img {
+              width: 30px;
+              height: 35px;
+              margin: 0 15px
+            }
+          }
+          .badge-button{
+            max-width: 40px;
+            margin-left: auto;
+          }
+          .button-element {
+            .background {
+              background-color: rgba(200,0,50,1);
+            }
+          }
+          &:hover{
+            box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+          }
+        }
+      }
+    }
+  }
+}

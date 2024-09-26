@@ -1,0 +1,181 @@
+@import 'src/css/styles/colors';
+@import 'src/css/styles/variables';
+
+.modal :first-child.user-bulk-import-modal{
+  min-width: 70%;
+  max-height: 95vh;
+}
+.user-bulk-import-modal{
+  height: 886px;
+  .user-bulk-import-modal-div{
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    h3 {
+      margin-top: 12px;
+    }
+    .import-input-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .import {
+        flex: 1;
+        margin: 18px 0;
+        display: flex;
+        flex-direction: column;
+        .import-input {
+          flex: 1;
+        }
+        .set-password {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          height: 30px;
+          .password-inputs {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 15px;
+          }
+          .password-selects {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            font-size: 15px;
+          }
+          .set-password-text {
+            margin: 0 8px;
+          }
+          .password-input {
+            height: 30px;
+            border: 1px solid rgb(220, 220, 220);
+            padding: 0 8px;
+          }
+        }
+      }
+      .loader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 36px;
+        margin: 0 0 8px 0;
+        p {
+          font-weight: 500;
+          margin: 0 0 0 12px;
+        }
+      }
+      .message {
+        line-height: 20px;
+        height: 36px;
+        margin: 0 0 8px 0;
+        padding: 8px;
+        border-radius: 4px;
+      }
+      .total-entries {
+        text-align: right;
+        font-weight: 500;
+      }
+      .table-container {
+        table{
+          width: 100%;
+          border-collapse: collapse;
+          thead{
+            background-color: #f3f7fc;
+          }
+          tr{
+            &:not(.header){
+              &:hover{
+                box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+              }
+            }
+            width: 100%;
+            th,td{
+              text-align: center;
+              height: 48px;
+              input {
+                padding: 8px;
+                border-radius: 8px;
+                border: 1px solid $primary-color;
+              }
+            }
+            td {
+              padding: 12px 0;
+            }
+          }
+        }
+      }
+      .option-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 18px 12px 0;
+        .select-staff {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .staff-text {
+            margin: 0 4px 0 0;
+          }
+          .bulk-staff-select {
+            width: 180px;
+            margin: 0 36px 0 12px;
+            height: 30px;
+          }
+        }
+        .email-verified {
+          display: flex;
+          justify-content: center;
+          font-size: 15px;
+          margin: 0 32px 0 0;
+          .skip-verify-text {
+            margin: 0 0 0 4px;
+          }
+        }
+      }
+      .password-warning {
+        font-size: 14px;
+        margin: 8px 12px 0;
+        color: red;
+      }
+      .import-button {
+        margin: 18px 0;
+      }
+      .imported-user-container {
+        margin-top: 24px;
+        .csv-download {
+          display: none;
+        }
+        .imported-user-table {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .modal-back-button {
+      height: 48px;
+      width: 48px;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      border-radius: 2px;
+      padding: 8px;
+      cursor: pointer;
+      z-index: 150;
+      svg {
+        width: 100%;
+        height: 100%;
+        .real-path{
+          fill: $primary-color;
+        }
+      }
+      &:hover{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+      }
+      &:active{
+        box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.2);
+      }
+    }
+  }
+}

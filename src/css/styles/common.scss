@@ -1,0 +1,129 @@
+@import './colors'; 
+@import './variables'; 
+
+.line-div{
+  padding: 20px 0;
+  position: relative;
+  display: flex;
+  .text{
+    display: block;
+    text-align: center;
+    opacity: 0.75;
+    padding: 0 16px;
+  }
+  .line{
+    position: relative;
+    display: block;
+    flex: 1;
+    &:after{
+      content: "";
+      position: absolute;
+      top: 50%; left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $light-gray-color;
+    }
+  }
+}
+
+.errors{
+  border: 1px solid red;
+  background-color: rgba(255,0,0,.25);
+  a{
+    text-decoration: underline;
+  }
+}
+.success{
+  border: 1px solid rgba(0,125,255,1);
+  background-color: rgba(0,125,255,.25);
+}
+.errors,.success{
+  border-radius: 3px;
+  padding: 8px;
+  li:last-of-type{
+    margin: 0;
+  }
+}
+
+.highlight-off, .hlo{
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.show{
+  display: block;
+}
+.fade-in{
+  animation: fade-in 0.5s $loading-cubic-bezier;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.hide{
+  display: none;
+}
+
+.ajax-loading {
+  margin: 20px auto;
+  position: relative;
+  height: 40px;
+  width: 40px;
+
+  &:after, 
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+  }
+  &:before{
+    top: 4px;left: 4px;
+    z-index: 12;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,.12);
+  }
+
+  &:after {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,.12);
+    border: 2px solid #fff;
+    border-top-color:#555;
+    -webkit-animation: lds-rolling 0.65s $loading-cubic-bezier infinite;
+    animation: lds-rolling 0.65s $loading-cubic-bezier infinite;
+  }
+
+}
+
+@keyframes lds-rolling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes lds-rolling {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+svg.light{
+  .real-path{
+    fill: #FFF;
+  }
+}

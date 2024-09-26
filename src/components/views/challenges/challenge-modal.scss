@@ -1,0 +1,199 @@
+.modal-main.challenge-modal:first-child {
+  min-width: 70%;
+  max-height: 96vh;
+  overflow: auto;
+  padding: 36px;
+}
+
+.challenge-modal {
+  label {
+    margin: 8px 0;
+  }
+
+  .editor {
+    min-height: 120px;
+    max-height: 600px;
+    border: 1px solid rgba(240, 240, 240, 1);
+    padding: 0 8px;
+    border-radius: 3px;
+    margin: 0 0 20px;
+  }
+
+  .rdw-embedded-wrapper {
+    img {
+      content: url("../../../css/imgs/youtube-icon.png");
+      width: 17px;
+    }
+  }
+
+  figure {
+    margin: auto;
+
+    img {
+      max-height: 240px;
+    }
+  }
+
+  .rdw-embedded-modal-header span {
+    display: none;
+  }
+
+  .rdw-embedded-modal-header:after {
+    content: "Youtube Video Link";
+  }
+
+  .rdw-embed-popup {
+    left: -80px,
+  }
+
+  .rdw-emoji-popup {
+    left: -100px,
+  }
+
+  .rdw-image-popup {
+    left: -120px,
+  }
+
+  .image {
+    margin: 0 0 20px 0;
+
+    img {
+      max-width: 240px;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  .cover-image {
+    margin: 0 0 20px 0;
+
+    img {
+      max-width: 512px;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  .challenge-category {
+    margin: 0 0 20px 0;
+  }
+
+  .delete-challenge {
+    width: 250px;
+    margin: 0 0 20px 0;
+  }
+
+  .save-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .submit-btn {
+      // text-align: center;
+      padding-right: 15px;
+      margin: 0 10px;
+    }
+
+    .warning {
+      .background {
+        background-color: rgba(200, 0, 50, 1);
+      }
+    }
+  }
+  .hide-save-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .cropper-challenge {
+    width: 512px;
+    height: 384px;
+    margin: auto;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, 0);
+    z-index: 1000;
+  }
+
+  .button {
+    margin-top: 42px;
+  }
+
+  .image-button {
+    margin-top: 20px;
+    width: 300px;
+  }
+
+  .challenge-self-earning {
+    margin-top: 20px;
+    display: flex;
+
+    .self-earning-label {
+      margin-left: 10px;
+    }
+  }
+
+  .self-earning-description {
+    margin-top: 4px;
+    margin-bottom: 15px;
+  }
+
+  .challenge-is-draft {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    display: flex;
+
+    .draft-label {
+      margin-left: 10px;
+    }
+  }
+
+  .dimmed-background {
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    /* important to use fixed, not absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    /* may not be necessary */
+  }
+
+  .challenge-description {
+    textarea {
+      min-height: 100px;
+    }
+  }
+
+  .time-to-complete {
+    margin: 20px 0;
+    .time-to-complete-input-container{
+      display: flex;
+      flex-direction: row;
+      .time-to-complete-input-sub-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 50px 0 0;
+        input {
+          z-index: auto;
+          height: 40px;
+          width: 100px;
+          margin: 0 10px 0 10px;
+        }
+      }
+      }
+  }
+
+}

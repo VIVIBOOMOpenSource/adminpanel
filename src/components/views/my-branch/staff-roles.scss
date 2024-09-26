@@ -1,0 +1,47 @@
+.branch-list{
+  border-radius: 3px;
+  overflow: hidden;
+  h2 {
+    margin-bottom: 32px;
+  }
+  table{
+    width: 100%;
+    background-color: #FFF;
+    border-collapse:collapse;
+    thead{
+      background-color: #f3f7fc;
+    }
+    tr{
+      &:not(.header){
+        cursor: pointer;
+        &:hover{
+          box-shadow: inset 0px 0px 250px 0px rgba(0,0,0,.1);
+        }
+      }
+      width: 100%;
+      th,td{
+        width: 250px;
+        padding: 0 10px;
+        text-align: center;
+        height: 48px;
+      }
+    }
+  }
+  .no-results{
+    padding: 20px;
+  }
+  .branch-footer{
+    height: 56px;
+    padding: 0 8px;
+    background-color: #f3f7fc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .button-element {
+      width: 120px;
+    }
+  }
+  .branch-add {
+    width: 200px;
+  }
+}

@@ -1,0 +1,72 @@
+.modal :first-child.quota-modal {
+    overflow: auto;
+    max-width: 720px;
+  }
+  
+  .quota-modal {
+    max-height: 95vh;
+    max-width: 720px;
+    
+    .form-item {
+      margin: 0 0 15px;
+    }
+
+    select,
+    multi-select {
+      display: block;
+      height: 40px;
+      width: 100%;
+      margin: 0 0 12px;
+    }
+    .carousel-header {
+      margin: 0 0 16px;
+    }
+    .react-datetime-picker {
+      width: 60%;
+  
+      .react-datetime-picker__wrapper {
+        border: 0px;
+      }
+      select {
+        width: 100px;
+        display: inline-block;
+        border: 4px;
+      }
+    }
+
+    .date-container {
+      height: 380px;
+      .date {
+        float: left;
+        width: 50%;
+      }
+    }
+    .days-picker {
+      height: 350px;
+    }
+    .time-container {
+      height: 80px;
+      .time {
+        float: left;
+        width: 40%;
+      }
+    }
+    .workshop {
+      input {
+        margin-left: 8px;
+      }
+    }
+    .workshop-desc {
+      height: 150px;
+      label span {
+        color: red;
+      }
+      textarea {
+        height: 100px;
+      }
+    }
+    .survey-builder {
+      padding: 16px;
+    }
+  }
+  

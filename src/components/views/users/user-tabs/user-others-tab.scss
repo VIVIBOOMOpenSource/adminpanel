@@ -1,0 +1,97 @@
+@import "src/css/styles/_colors.scss";
+@import "src/css/styles/variables";
+
+.user-other-tab {
+  .wallet-section {
+    margin-top: 20px;
+    .wallet-section-title{
+      margin: 40px 0 10px 0;
+    }
+    .item {
+      margin: 0 0 20px;
+      label {
+        font-weight: bold;
+      }
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: gray;
+        }
+      }
+      textarea {
+        height: auto;
+      }
+      select {
+        z-index: 1000;
+      }
+      .balance-button-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px 0 20px 0;
+        label {
+          margin: 0 24px 0 0;
+          color: inherit;
+        }
+        input {
+          margin: 0 8px 0 0;
+        }
+      }
+      .wallet-balance-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        input {
+          width: 100px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .user-claimed-rewards-ctn {
+      flex: 1;
+      margin: 15px 0;
+      padding: 10px;
+      background-color: #e4edf6;
+      .user-claimed-rewards-header {
+        height: 56px;
+        padding: 0 8px;
+        background-color: #f3f7fc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .no-reward-text {
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+      }
+      .user-claimed-rewards-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 12px 20px 0 25px;
+        font-weight: bold;
+      }
+      ul.user-claimed-rewards-list{
+        margin: 0;
+        background-color: #fff;
+        > li{
+          margin: 0;
+          padding: 8px;
+          display: flex;
+          border-radius: 3px;
+          .user-claimed-rewards-info{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            margin: 12px 70px 0 20px;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+
+  }
+}

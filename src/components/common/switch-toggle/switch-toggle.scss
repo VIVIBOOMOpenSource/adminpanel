@@ -1,0 +1,57 @@
+
+@import '../../../css/styles/colors';
+
+$switchToggleHeight: 32px;
+$switchToggleWidth: 56px;
+$switchToggleDivisor: 6;
+$switchToggleDotHeight: $switchToggleHeight - $switchToggleDivisor;
+
+.switch-toggle{
+  cursor: pointer;
+  position: relative;
+  margin: 0 8px;
+  border-radius: 25px;
+  width: $switchToggleWidth;
+  height: $switchToggleHeight;
+  background-color: rgba(210,210,210,1);
+  transition: background-color 0.3s cubic-bezier(.71,-.29,.12,.63);
+  .dot{
+    position: absolute;
+    border-radius: 25px;
+    background-color: #FFF;
+    top: ($switchToggleHeight - $switchToggleDotHeight) / 2;
+    left: ($switchToggleHeight - $switchToggleDotHeight) / 2;
+    height: $switchToggleDotHeight;
+    width: $switchToggleDotHeight;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s cubic-bezier(.71,-.29,.12,.63);
+  }
+  .line{
+    position: absolute;
+    height: 40%;
+    top: 30%;
+    left: ($switchToggleDotHeight / 2) + ($switchToggleDivisor / 2);
+    width: 1px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,1);
+  }
+  .circle{
+    position: absolute;
+    height: $switchToggleDotHeight;
+    width: $switchToggleDotHeight;
+    top: ($switchToggleHeight - $switchToggleDotHeight) / 2;
+    left: ($switchToggleWidth - $switchToggleDotHeight) - ($switchToggleDivisor / 2);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,1);
+    transform: scale(0.5);
+  }
+  &.on {
+    background-color: $primary-color;
+    .dot{
+      left: ($switchToggleWidth - $switchToggleDotHeight) - ($switchToggleDivisor / 2);
+    }
+  }
+}

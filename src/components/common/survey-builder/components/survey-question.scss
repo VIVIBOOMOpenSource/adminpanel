@@ -1,0 +1,33 @@
+.question-field {
+  margin-top: 1em;
+  border-top: #ddd solid 1.5px;
+  padding-bottom: 1.5em;
+  .question-form {
+    .ratings {
+      display: flex;
+      flex-direction: row;
+      .rating {
+        padding: 20px;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        p {
+          margin: 12px 0;
+        }
+      }
+    }
+  }
+}
+
+.question-field input[type='radio'],
+.question-field input[type='checkbox'] {
+  margin-right: 8px;
+}
+
+.question-field button {
+  margin: 0.3em;
+}
+

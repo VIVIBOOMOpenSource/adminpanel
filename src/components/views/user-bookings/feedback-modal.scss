@@ -1,0 +1,19 @@
+.modal :first-child.feedback-modal {
+  overflow: auto;
+  max-width: 720px;
+  text-align: left;
+}
+.feedback-modal {
+  max-height: 95vh;
+  max-width: 720px;
+  textarea {
+    height: 80px;
+    position:unset;
+    margin-bottom: 24px;
+  }
+  .select-container {
+    margin-bottom: 24px;
+    z-index: 10000000000;
+  }    
+}
+  

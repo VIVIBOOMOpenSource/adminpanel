@@ -1,0 +1,62 @@
+@import './colors'; 
+@import './variables'; 
+
+@import './buttons';
+@import './input';
+@import './text';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box; 
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box; 
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  color: #3f4d5a;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",monospace;
+}
+#root{
+  position: relative;
+  height: 100%;
+}
+.app{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+}
+@media screen and (max-width: $mobile-width) {
+  .app{
+    flex-direction: column;
+  }
+}
+
+#content{
+  position: relative;
+  flex: 1 1 auto;
+  padding: 20px;
+}
+
+@media screen and (max-width: $mobile-width) {
+  #content{
+    padding: 48+12px 12px 12px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  #content{
+    overflow: auto;
+  }
+}
